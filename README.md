@@ -1,8 +1,8 @@
 # ausencia_congresso
 repositório criado como projeto final das disciplinas "pensamento computacional" e "transparência, reprodutibilidade e uso ético dos dados", no master do insper
 
-- a escolha por ``selenium`` ocorreu porque eu acredito que esta e uma das vantagens em usar Python
-- e, por isso, gostaria de ganhar mais fluencia ao usar essa biblioteca
+- a escolha por ``selenium`` ocorreu porque eu acredito que esta é uma das vantagens em usar Python
+- e, por isso, gostaria de ganhar mais fluência ao usar essa biblioteca
 - ao desenvolver os scripts, a Câmara passou a atrapalhar o acesso da máquina com ``HTTP ERROR 431``
 
 #### câmara dos deputados
