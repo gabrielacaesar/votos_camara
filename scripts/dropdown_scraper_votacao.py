@@ -8,7 +8,7 @@ import pandas as pd
 
 browser = webdriver.Chrome(ChromeDriverManager().install())
 
-# import CSV scraped with sessao_deliberativa_cd_2.csv
+# import CSV scraped with sessao_deliberativa_cd.csv
 url_votacao = pd.read_csv("data/urls_votacao_cd.csv")
 
 # coluna com urls para webscraping
