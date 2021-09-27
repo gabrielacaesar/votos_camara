@@ -18,4 +18,4 @@ url_votacao['id'] = url_votacao['link'].apply(lambda x : x.split('/')[-1])
 url_votacao['final_url'] = url_votacao.apply(lambda x : 'https://www.camara.leg.br/presenca-comissoes/votacao-portal?reuniao=' + x['id'], axis = 1)
 
 # download de dataframe
-url_votacao.to_csv('urls_votacao_cd.csv', encoding='utf-8', index = False)
+url_votacao.to_csv('data/urls_votacao_cd.csv', encoding='utf-8', index = False)
