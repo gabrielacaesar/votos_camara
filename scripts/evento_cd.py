@@ -43,5 +43,5 @@ df = pd.DataFrame(dados)
 browser.quit()
 
 print(df)
-df.to_csv('df.csv', encoding='utf-8', index = False)
+df.to_csv('data/df.csv', encoding='utf-8', index = False)
 
