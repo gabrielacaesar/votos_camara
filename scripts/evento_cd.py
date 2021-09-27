@@ -1,3 +1,6 @@
+#################################################
+###     SCRAPER PARA OS EVENTOS DA CÂMARA     ###
+#################################################
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
