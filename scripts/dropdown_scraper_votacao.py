@@ -35,4 +35,4 @@ urls_finais = pd.DataFrame(dados)
 #print(urls_finais)
 
 # download do dataframe
-urls_finais.to_csv('data/df.csv', encoding='utf-8', index = False)
+urls_finais.to_csv('data/urls_finais.csv', encoding='utf-8', index = False)
