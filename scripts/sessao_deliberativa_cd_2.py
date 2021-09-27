@@ -1,6 +1,4 @@
-# importacao de bibliotecas
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
+# importacao de biblioteca
 import pandas as pd
 
 # import CSV scraped with evento_cd.py
