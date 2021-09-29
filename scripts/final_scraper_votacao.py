@@ -20,37 +20,20 @@ urls_finais = urls_finais['link_final']
 ##### EM DESENVOLVIMENTO
 # OBS: add 'tituloNomePauta' no scraper
 
-# pegando os dados da URL final
-# url = 'https://www.camara.leg.br/presenca-comissoes/votacao-portal?reuniao=59536&itemVotacao=28492'
-# browser.get(url)
-# dado = browser.find_elements_by_xpath('//div[@class="titulares"]/ul/li')
-# print(votos)
-
-teste_urls_finais = ['https://www.camara.leg.br/presenca-comissoes/votacao-portal?reuniao=59536&itemVotacao=28492',
-'https://www.camara.leg.br/presenca-comissoes/votacao-portal?reuniao=59536&itemVotacao=28492',
-'https://www.camara.leg.br/presenca-comissoes/votacao-portal?reuniao=59542&itemVotacao=28598',
-'https://www.camara.leg.br/presenca-comissoes/votacao-portal?reuniao=59542&itemVotacao=28607']
-
 link_votacao = []
-span_itens = []
+li_itens = []
 #nome_itens = []
 #partido_uf_itens = []
 #voto_itens = []
 
-for link in range(0,len(teste_urls_finais)):
-  browser.get(teste_urls_finais[link])
-  li_itens = browser.find_elements_by_xpath('//div[@class="titulares"]/ul/li')
-  #nome = browser.find_elements_by_xpath('//span[@class="nome"]')
-  #partido_uf = browser.find_elements_by_xpath('//span[@class="nomePartido"]')
-  #voto = browser.find_elements_by_xpath('//span[@class="votou"]')
-  for span in range(0, len(li_itens)):
-    link_votacao.append(teste_urls_finais[link])
-    #nome_itens.append(nome[span].text)
-    #partido_uf_itens.append(partido_uf[span].text)
-    #voto_itens.append(voto[span].text)
-    span_itens.append(li_itens[span].text)
+for link in range(0,len(urls_finais.tolist())):
+  browser.get(urls_finais[link])
+  ul_itens = browser.find_elements_by_xpath('//div[@class="titulares"]/ul')
+  for li_item in range(0, len(ul_itens)):
+    link_votacao.append(urls_finais[link])
+    li_itens.append(ul_itens[li_item].text)
 
-dados = {'link': link_votacao, 'option': span_itens}
+dados = {'link': link_votacao, 'option': li_itens}
 # 'nome': nome_itens, 'partido_uf': partido_uf_itens, 'voto': voto_itens
 print(dados)
 
