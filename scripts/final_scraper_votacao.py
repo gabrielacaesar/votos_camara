@@ -38,13 +38,12 @@ for li_item in range(0, len(teste_url)):
   partido_uf = browser.find_elements_by_xpath('//span[@class="nomePartido"]')
   voto = browser.find_elements_by_xpath('//span[@class="votou"]')
   for span_item in range(0, len(li_itens)):
-    span_itens = browser.find_elements_by_xpath('//div[@class="titulares"]/ul/li/span')
     nome_votacao.append(h4_titulo[link].text)
     link_votacao.append(teste_url[link])
     nome_deputado.append(nome[span_item].text)
     partido_deputado.append(partido_uf[span_item].text)
     #print(f'{nome[span_item].text} - {partido_uf[span_item].text}')
-    if len(span_itens) > 3:
+    if len(li_itens) > 3:
       voto_deputado.append(voto[span_item].text)
       #print(voto[span_item].text)
     else:
