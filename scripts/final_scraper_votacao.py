@@ -22,9 +22,6 @@ urls_finais = urls_finais['link_final']
 
 link_votacao = []
 li_itens = []
-#nome_itens = []
-#partido_uf_itens = []
-#voto_itens = []
 
 for link in range(0,len(urls_finais.tolist())):
   browser.get(urls_finais[link])
@@ -34,7 +31,6 @@ for link in range(0,len(urls_finais.tolist())):
     li_itens.append(ul_itens[li_item].text)
 
 dados = {'link': link_votacao, 'option': li_itens}
-# 'nome': nome_itens, 'partido_uf': partido_uf_itens, 'voto': voto_itens
 print(dados)
 
 dados_finais = pd.DataFrame(dados)
