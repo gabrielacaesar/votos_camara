@@ -20,20 +20,48 @@ urls_finais = urls_finais['link_final']
 ##### EM DESENVOLVIMENTO
 # OBS: add 'tituloNomePauta' no scraper
 
+teste_url = ['https://www.camara.leg.br/presenca-comissoes/votacao-portal?reuniao=59536&itemVotacao=28492']
+
 link_votacao = []
-li_itens = []
+nome_votacao = []
+nome_deputado = []
+partido_deputado = []
+voto_deputado = []
+# urls_finais.tolist()
 
-for link in range(0,len(urls_finais.tolist())):
-  browser.get(urls_finais[link])
-  ul_itens = browser.find_elements_by_xpath('//div[@class="titulares"]/ul')
-  for li_item in range(0, len(ul_itens)):
-    link_votacao.append(urls_finais[link])
-    li_itens.append(ul_itens[li_item].text)
+for link in range(0, len(teste_url)):
+  browser.get(teste_url[link])
+  h4_titulo = browser.find_elements_by_xpath('//h4[@class="tituloNomePauta"]')
+for li_item in range(0, len(teste_url)):
+  li_itens = browser.find_elements_by_xpath('//div[@class="titulares"]/ul/li')
+  nome = browser.find_elements_by_xpath('//span[@class="nome"]')
+  partido_uf = browser.find_elements_by_xpath('//span[@class="nomePartido"]')
+  voto = browser.find_elements_by_xpath('//span[@class="votou"]')
+  for span_item in range(0, len(li_itens)):
+    span_itens = browser.find_elements_by_xpath('//div[@class="titulares"]/ul/li/span')
+    nome_votacao.append(h4_titulo[link].text)
+    link_votacao.append(teste_url[link])
+    nome_deputado.append(nome[span_item].text)
+    partido_deputado.append(partido_uf[span_item].text)
+    #print(f'{nome[span_item].text} - {partido_uf[span_item].text}')
+    if voto in span_itens:
+      voto_deputado.append(voto[span_voto].text)
+      #print(voto[span_item].text)
+    else:
+      voto_deputado.append("Ausente")
+      #print(voto_deputado)
+      print(f'{nome_deputado} - {partido_deputado} - {voto_deputado}')
+      
+dados = {'link_votacao': link_votacao, 
+'nome_votacao': nome_votacao,
+'nome_deputado': nome_deputado, 
+'partido_deputado' : partido_deputado,
+'voto_deputado': voto_deputado}
+#
 
-dados = {'link': link_votacao, 'option': li_itens}
 print(dados)
 
 dados_finais = pd.DataFrame(dados)
-dados_finais.to_csv('data/dados_finais.csv', encoding='utf-8', index = False)
+dados_finais.to_csv('data/dados_finais_TESTE.csv', encoding='utf-8', index = False)
 
 browser.quit()
