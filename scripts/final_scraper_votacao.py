@@ -44,8 +44,8 @@ for li_item in range(0, len(teste_url)):
     nome_deputado.append(nome[span_item].text)
     partido_deputado.append(partido_uf[span_item].text)
     #print(f'{nome[span_item].text} - {partido_uf[span_item].text}')
-    if voto in span_itens:
-      voto_deputado.append(voto[span_voto].text)
+    if len(span_itens) > 3:
+      voto_deputado.append(voto[span_item].text)
       #print(voto[span_item].text)
     else:
       voto_deputado.append("Ausente")
