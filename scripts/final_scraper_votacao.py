@@ -1,4 +1,5 @@
 #################################################
+###           SCRIPT DESCONTINUADO            ###
 ###    SCRAPER PARA OS DADOS DA VOTAÇÃO       ###
 #################################################
 # importacao de bibliotecas
@@ -16,11 +17,6 @@ urls_finais['link_final'] = urls_finais.apply(lambda row: row.link + '&itemVotac
 urls_finais = urls_finais['link_final']
 #print(urls_finais['link_final'])
 #urls_finais.to_csv("data/urls_finais_2.csv", encoding='utf-8', index = False)
-
-##### SCRIPT DE TESTE
-##### EM DESENVOLVIMENTO
-##### POR ENQUANTO COMECA A AQUI!!!
-
 
 teste_url = ['https://www.camara.leg.br/presenca-comissoes/votacao-portal?reuniao=59536&itemVotacao=28492']
 
