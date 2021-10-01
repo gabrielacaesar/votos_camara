@@ -14,6 +14,15 @@ repositório criado como projeto final das disciplinas "pensamento computacional
 - sem essa funcionalidade na API, a obtenção desses dados se torna mais manual e custosa
 - o objetivo desses scripts é automatizar o acesso aos dados completos (ou seja, com os ausentes) das votações nominais
 
+#### o que faz cada script
+- [Script 1](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/evento_cd.py)
+
+- [Script 2](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/sessao_deliberativa_cd.py)
+
+- [Script 3](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/dropdown_scraper_votacao.py)
+
+- [Script 4](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/final_scraper_bs.py)
+
 #### senado federal
 - hoje, a API do Senado informa os deputados ausentes nas votações nominais
 - por isso, neste caso, não faremos uma raspagem, e sim usaremos a API
