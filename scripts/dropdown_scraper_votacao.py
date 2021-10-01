@@ -15,8 +15,9 @@ url_votacao = pd.read_csv("data/urls_votacao_cd.csv")
 url_scraper = url_votacao['final_url']
 
 # lista vazia para receber dados
-option_value = []
 link_votacao = []
+option_value = []
+option_name = []
 
 # loop para acessar URL e pegar o 'value' do option
 for link in range(0,len(url_scraper.tolist())):
@@ -25,10 +26,12 @@ for link in range(0,len(url_scraper.tolist())):
   for element in range(0, len(dropdown_options)):
     link_votacao.append(url_scraper[link])
     option_value.append(dropdown_options[element].get_attribute("value"))
+    option_name.append(dropdown_options[element].text)
   
 browser.quit()
 # inserindo dados em um dicionario
-dados = {'link': link_votacao, 'option': option_value}
+dados = {'link': link_votacao, 'id_option': option_value, 'nome_option': option_name}
+print(dados)
 
 # transformando em dataframe
 urls_finais = pd.DataFrame(dados)
