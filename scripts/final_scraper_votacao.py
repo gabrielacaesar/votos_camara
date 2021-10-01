@@ -17,8 +17,10 @@ urls_finais = urls_finais['link_final']
 #print(urls_finais['link_final'])
 #urls_finais.to_csv("data/urls_finais_2.csv", encoding='utf-8', index = False)
 
+##### SCRIPT DE TESTE
 ##### EM DESENVOLVIMENTO
-# OBS: add 'tituloNomePauta' no scraper
+##### POR ENQUANTO COMECA A AQUI!!!
+
 
 teste_url = ['https://www.camara.leg.br/presenca-comissoes/votacao-portal?reuniao=59536&itemVotacao=28492']
 
@@ -43,8 +45,8 @@ for li_item in range(0, len(teste_url)):
     nome_deputado.append(nome[span_item].text)
     partido_deputado.append(partido_uf[span_item].text)
     #print(f'{nome[span_item].text} - {partido_uf[span_item].text}')
-    if len(li_itens) > 3:
-      voto_deputado.append(voto[span_item].text)
+    if len(li_itens) > 3: # este trecho nao esta funcionando
+      voto_deputado.append(voto[span_item].text) 
       #print(voto[span_item].text)
     else:
       voto_deputado.append("Ausente")
@@ -56,7 +58,6 @@ dados = {'link_votacao': link_votacao,
 'nome_deputado': nome_deputado, 
 'partido_deputado' : partido_deputado,
 'voto_deputado': voto_deputado}
-#
 
 print(dados)
 
