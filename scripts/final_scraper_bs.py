@@ -7,6 +7,7 @@ import pandas as pd
 # import CSV scraped with dropdown_scraper_votacao.csv
 urls_finais = pd.read_csv("data/urls_finais_1.csv")
 
+### OBS: ACRESCENTAR O QUERY CONTAINS PARA NOMINAL
 print(urls_finais)
 # criando a URL especifica de cada item do dropdown
 urls_finais['link_final'] = urls_finais.apply(lambda row: row.link + '&itemVotacao=' +  str(row.option), axis = 1)
