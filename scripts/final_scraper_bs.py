@@ -4,25 +4,55 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
-# link para raspar
-page = requests.get('https://www.camara.leg.br/presenca-comissoes/votacao-portal?reuniao=63360&itemVotacao=10160')
+# import CSV scraped with dropdown_scraper_votacao.csv
+urls_finais = pd.read_csv("data/urls_finais_1.csv")
+#print(urls_finais)
 
-# parseando o html
-soup = BeautifulSoup(page.text, 'html.parser')
+# criando a URL especifica de cada item do dropdown
+urls_finais['link_final'] = urls_finais.apply(lambda row: row.link + '&itemVotacao=' +  str(row.option), axis = 1)
+urls_finais = urls_finais['link_final']
+#print(urls_finais.tolist())
 
-# criando lista vazia para o append
-span_all = []
+# criando listas vazias para o append
+url_all = []
+nome_all = []
+partido_all = []
+voto_all = []
 
-# loop para coleta dos spans
-for li in soup.find_all(class_='titulares'):
-    for span in li.find_all('span'):
-        #print(span.string) 
-        span_all.append(span.string)
-        #print(span_all)
-
-dados = {'conteudo': span_all}
+# loop para definir URL
+# e depois loop para e entrar no li
+# e pegar os spans definidos
+for url in range(0, len(urls_finais.tolist())):
+  print(url)
+  page = requests.get(urls_finais.tolist()[0])
+  soup = BeautifulSoup(page.text, 'html.parser')
+  div = soup.find('div', {'class': 'titulares'}) 
+  try:
+      for li in div.find_all('li'):
+        url_all.append(url)
+        nome = li.find("span", {"class": "nome"}).contents[0]
+        nome_all.append(nome)
+        print(nome_all)
+        partido = li.find("span", {"class": "nomePartido"}).contents[0]
+        partido_all.append(partido)
+        print(partido_all)
+        try:
+          voto = li.find("span", {"class": ["voto", "sim"]}).contents[0]
+          voto_all.append(voto)
+        except AttributeError:
+            try:
+              voto = li.find("span", {"class": ["voto", "nao"]}).contents[0]
+              voto_all.append(voto)
+            except AttributeError:
+              voto = 'Ausente'
+              voto_all.append(voto)
+        print(f'{nome_all} - {partido_all} - {voto_all} - {url_all}')
+  except AttributeError:
+    "Simbolica"
+        
+dados = {'nome': nome_all, 'partido': partido_all, 'voto': voto_all, 'url': url_all}
 print(dados)
 
 dados_finais = pd.DataFrame(dados)
-dados_finais.to_csv('data/dados_finais_SOAP.csv', encoding='utf-8', index = False)
+dados_finais.to_csv('data/dados_finais_SOAP_ALL.csv', encoding='utf-8', index = False)
 
