@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
-# import CSV scraped with dropdown_scraper_votacao.csv
+# import CSV scraped with dropdown_scraper_votacao.py
 urls_finais = pd.read_csv("data/urls_finais_1.csv")
 
 ### OBS: ACRESCENTAR O QUERY CONTAINS PARA NOMINAL
