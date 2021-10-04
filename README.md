@@ -1,9 +1,9 @@
 Repositório criado como projeto final das disciplinas "Pensamento computacional" e "Transparência, reprodutibilidade e uso ético dos dados", no master do Insper
 
 ### Por que usamos ``Selenium``
-- a escolha por ``selenium`` ocorreu porque eu acredito que esta é uma das vantagens em usar Python
-- e, por isso, gostaria de ganhar mais fluência ao usar essa biblioteca
-- ao desenvolver os scripts com ``rvest`` no R, a Câmara passou a atrapalhar o acesso da máquina com ``HTTP ERROR 431``
+- A escolha por ``selenium`` ocorreu porque eu acredito que esta é uma das vantagens em usar Python
+- E, por isso, gostaria de ganhar mais fluência ao usar essa biblioteca
+- Ao desenvolver os scripts com ``rvest`` no R, a Câmara passou a atrapalhar o acesso da máquina com ``HTTP ERROR 431``
 
 ### O que o código faz
 - Acessa a pesquisa por atividades no plenário
@@ -18,13 +18,13 @@ Repositório criado como projeto final das disciplinas "Pensamento computacional
 - Cria um CSV com os votos de todos os deputados nas votações
 
 ### Por que raspamos o site da Câmara
-- hoje, a API da Câmara não informa os deputados ausentes nas votações nominais
-- tal demanda já foi apresentada como sugestão administrativa via Lei de Acesso à Informação
-- também foi reforçada, com apoio de outro usuário, [via issue no GitHub](https://github.com/CamaraDosDeputados/dados-abertos/issues/312) e [já havia sido cobrada por outras pessoas antes](https://github.com/CamaraDosDeputados/dados-abertos/issues/302)
-- para ter o resultado nominal com todos os deputados em exercício, hoje é necessário raspar o HTML da Casa ([exemplo aqui](https://www.camara.leg.br/presenca-comissoes/votacao-portal?reuniao=63176&itemVotacao=10127)) ou baixar um arquivo DBF
-- os arquivos DBF, porém, pararam de ser atualizados em determinado momento da pandemia, com a adoção do modelo de votação virtual
-- sem essa funcionalidade na API, a obtenção desses dados se torna mais manual e custosa
-- o objetivo desses scripts é automatizar o acesso aos dados completos (ou seja, com os ausentes) das votações nominais
+- Hoje, a API da Câmara não informa os deputados ausentes nas votações nominais
+- Tal demanda já foi apresentada como sugestão administrativa via Lei de Acesso à Informação
+- Também foi reforçada, com apoio de outro usuário, [via issue no GitHub](https://github.com/CamaraDosDeputados/dados-abertos/issues/312) e [já havia sido cobrada por outras pessoas antes](https://github.com/CamaraDosDeputados/dados-abertos/issues/302)
+- Para ter o resultado nominal com todos os deputados em exercício, hoje é necessário raspar o HTML da Casa ([exemplo aqui](https://www.camara.leg.br/presenca-comissoes/votacao-portal?reuniao=63176&itemVotacao=10127)) ou baixar um arquivo DBF
+- Os arquivos DBF, porém, pararam de ser atualizados em determinado momento da pandemia, com a adoção do modelo de votação virtual
+- Sem essa funcionalidade na API, a obtenção desses dados se torna mais manual e custosa
+- O objetivo desses scripts é automatizar o acesso aos dados completos (ou seja, com os ausentes) das votações nominais
 
 ### O que faz cada script
 - [Script 1](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/evento_cd.py): **evento_cd.py**           
