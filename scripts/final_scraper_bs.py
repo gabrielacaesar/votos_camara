@@ -1,16 +1,28 @@
-######### BEAUTIFUL SOUP ######### 
+###########################################################
+###      SCRIPT PARA ACESSAR URL DE VOTAÇÃO NOMINAL     ###
+###      E TAMBÉM COLETAR DADOS DE CADA DEPUTADO        ###  
+###########################################################
 # importacao de bibliotecas
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
 # import CSV scraped with dropdown_scraper_votacao.py
-urls_finais = pd.read_csv("data/urls_finais_1.csv")
+id_votacoes = pd.read_csv("data/id_votacoes.csv")
+print(id_votacoes)
 
-### OBS: ACRESCENTAR O QUERY CONTAINS PARA NOMINAL
-print(urls_finais)
 # criando a URL especifica de cada item do dropdown
-urls_finais['link_final'] = urls_finais.apply(lambda row: row.link + '&itemVotacao=' +  str(row.option), axis = 1)
+id_votacoes['link_final'] = id_votacoes.apply(lambda row: row.link + '&itemVotacao=' +  str(row.id_option), axis = 1)
+
+# criando coluna com 'nome_option' em caixa alta
+id_votacoes['nome_option'] = id_votacoes['nome_option'].str.upper().str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8')
+
+# criando filtro para 'nominal'
+filtro_nominal = id_votacoes['nome_option'].str.contains("NOMINAL")
+urls_finais = id_votacoes.loc[filtro_nominal]
+#print(urls_finais)
+
+# criando df com urls para raspagem
 urls_finais = urls_finais['link_final']
 
 # criando listas vazias para o append
@@ -51,5 +63,4 @@ dados = {'nome': nome_all, 'partido': partido_all, 'voto': voto_all, 'url': url_
 print(dados)
 
 dados_finais = pd.DataFrame(dados)
-dados_finais.to_csv('data/dados_finais_SOAP.csv', encoding='utf-8', index = False)
-
+dados_finais.to_csv('data/dados_finais.csv', encoding='utf-8', index = False)
