@@ -6,12 +6,13 @@ Repositório criado como projeto final das disciplinas "Pensamento computacional
 - ao desenvolver os scripts com ``rvest`` no R, a Câmara passou a atrapalhar o acesso da máquina com ``HTTP ERROR 431``
 
 ### O que o código faz
-- Acessa os HTMLs de atividades no plenário
-- Coleta os links de atividades no plenário
+- Acessa a pesquisa por atividades no plenário
+- Coleta os links de cada atividade no plenário
 - Filtra por sessões deliberativas (aquelas que têm votações)
 - Acessa os HTMLs de todas as sessões deliberativas
-- Coleta o número das votações nominais de cada sessão deliberativa
-- Cria URLs específicas para cada votação nominal
+- Coleta o id das votações de cada sessão deliberativa
+- Cria URLs específicas para cada votação
+- Filtra por votações nominais (aquelas que mostram o voto de cada político)
 - Acessa os HTMLs de todas as votações nominais
 - Coleta os dados das votações nominais
 - Cria um CSV com os votos de todos os deputados nas votações
