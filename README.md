@@ -28,9 +28,15 @@ Trabalho individual.
 
 Objetivo: criar um programa que executa um processo de ETL - Extract, Transform, Load. Essas 3 etapas são a base para programas que lidam com dados e são encontradas em diversos tipos de programas, exemplos:
 
-1- EXTRACT: acessa um determinado site, identifica e extrai do HTML apenas dados de interesse. TRASNFORM: faz alguma limpeza nos dados extraídos. LOAD: salva os dados extraídos em uma planilha.
+1)
+- EXTRACT: acessa um determinado site, identifica e extrai do HTML apenas dados de interesse. 
+- TRASNFORM: faz alguma limpeza nos dados extraídos. 
+- LOAD: salva os dados extraídos em uma planilha.
 
-2- EXTRACT: abre uma planilha disponibilizada pelo usuário. TRANSFORMA: manipula a planilha, limpando dados e/ou fazendo análises. LOAD: salva o resultado em um banco de dados.
+2)
+- EXTRACT: abre uma planilha disponibilizada pelo usuário. 
+- TRANSFORMA: manipula a planilha, limpando dados e/ou fazendo análises. 
+- LOAD: salva o resultado em um banco de dados.
 
 Você não precisa se limitar aos exemplos acima, desde que existam essas etapas em seu programa.
 
