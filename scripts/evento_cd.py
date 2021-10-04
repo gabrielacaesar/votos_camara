@@ -1,5 +1,5 @@
 ########################################################################
-###     SCRAPER PARA OS EVENTOS/ATIVIDADES DO PLENÁRIO DA CÂMARA     ###
+###          SCRAPER PARA OS EVENTOS DO PLENÁRIO DA CÂMARA           ###
 ########################################################################
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
@@ -42,8 +42,8 @@ for n in range(0,len(url_list)):
 
 dados = {'data' : data_n, 'hora' : hora_n, 'local' : local_n, 'evento' : evento_n, 'link' : link_n, 'url' : url_n}
 
-urls_atividade_plenario = pd.DataFrame(dados)
+urls_eventos_plenario = pd.DataFrame(dados)
 browser.quit()
 
-print(urls_atividade_plenario)
-urls_atividade_plenario.to_csv('data/urls_atividade_plenario.csv', encoding='utf-8', index = False)
+print(urls_eventos_plenario)
+urls_eventos_plenario.to_csv('data/urls_eventos_plenario.csv', encoding='utf-8', index = False)
