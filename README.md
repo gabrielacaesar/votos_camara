@@ -26,11 +26,14 @@ Repositório criado como projeto final das disciplinas "Pensamento computacional
 - o objetivo desses scripts é automatizar o acesso aos dados completos (ou seja, com os ausentes) das votações nominais
 
 ### O que faz cada script
-- [Script 1](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/evento_cd.py)
+- [Script 1](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/evento_cd.py):evento_cd.py
+O código entra na URL citada, que faz uma busca por eventos no plenário da Câmara desde 01/02/2020 (início da atual legislatura) até hoje (04/10/2021). Em cada URL, ele coleta os seguintes dados: data, hora, local, nome do evento e link do evento. Ele coloca tais dados em um dicionário e o transforma em um dataframe para fazer o download em CSV.
 
 - [Script 2](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/dropdown_scraper_votacao.py)
+O código lê o arquivo CSV gerado pelo script anterior e considera a coluna com as urls para gerar o loop. Na iteração, o robô coleta os dados do menu dropdown, como nome da votação e id da votação. Depois, ele cria um dicionário e o transforma em dataframe para, enfim, baixá-lo como CSV.
 
 - [Script 3](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/final_scraper_bs.py)
+O código lê o arquivo CSV gerado pelo script anterior (id_votacoes.csv). Ele considera a coluna 'id_option' e 'link' para criar uma coluna nova chamada 'link_final'. Depois, ele coloca a coluna 'nome_option' em caixa alta e sem acento para aplicar um filtro caso detecte a palavra 'NOMINAL'. Por fim, ele considera a coluna 'link_final' para fazer um loop e coletar os dados de cada votação nominais: nome do deputado, partido do deputado, UF do deputado e voto. Casa não haja voto, o robô coloca "Ausente". Por fim, ele cria um dicionário e o transforma em dataframe para, enfim, baixá-lo como CSV.
 
 ### Como você pode rodar o código na sua máquina
 xxxx
