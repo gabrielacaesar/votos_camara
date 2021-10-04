@@ -25,6 +25,7 @@ for link in range(0,len(url_scraper.tolist())):
   dropdown_options = browser.find_elements_by_xpath('//select[@id="dropDownReunioes"]/option')
   for element in range(0, len(dropdown_options)):
     link_votacao.append(url_scraper[link])
+    print(link_votacao)
     option_value.append(dropdown_options[element].get_attribute("value"))
     option_name.append(dropdown_options[element].text)
   
@@ -34,8 +35,8 @@ dados = {'link': link_votacao, 'id_option': option_value, 'nome_option': option_
 print(dados)
 
 # transformando em dataframe
-urls_finais = pd.DataFrame(dados)
-#print(urls_finais)
+id_votacoes = pd.DataFrame(dados)
+#print(id_votacoes)
 
 # download do dataframe
-urls_finais.to_csv('data/urls_finais_1.csv', encoding='utf-8', index = False)
+id_votacoes.to_csv('data/id_votacoes.csv', encoding='utf-8', index = False)
