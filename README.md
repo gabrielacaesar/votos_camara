@@ -1,11 +1,20 @@
-# votos_camara
 Repositório criado como projeto final das disciplinas "Pensamento computacional" e "Transparência, reprodutibilidade e uso ético dos dados", no master do Insper
 
+## Por que usamos ``Selenium``
 - a escolha por ``selenium`` ocorreu porque eu acredito que esta é uma das vantagens em usar Python
 - e, por isso, gostaria de ganhar mais fluência ao usar essa biblioteca
 - ao desenvolver os scripts com ``rvest`` no R, a Câmara passou a atrapalhar o acesso da máquina com ``HTTP ERROR 431``
 
-#### câmara dos deputados
+## O que os scripts fazem
+- Acessa os HTMLs de atividades no plenário
+- Filtra por sessões deliberativas (aqueles que têm votações)
+- Acessa os HTMLs de todas as sessões deliberativas
+- Coleta o número das votações nominais de cada sessão deliberativa
+- Cria URLs específicas para cada votação nominal
+- Acessa os HTMLs de todas as votações nominais
+- Cria um CSV com os votos de todos os deputados nas votações
+
+#### Por que raspamos o site da Câmara
 - hoje, a API da Câmara não informa os deputados ausentes nas votações nominais
 - tal demanda já foi apresentada como sugestão administrativa via Lei de Acesso à Informação
 - também foi reforçada, com apoio de outro usuário, [via issue no GitHub](https://github.com/CamaraDosDeputados/dados-abertos/issues/312) e [já havia sido cobrada por outras pessoas antes](https://github.com/CamaraDosDeputados/dados-abertos/issues/302)
@@ -14,7 +23,7 @@ Repositório criado como projeto final das disciplinas "Pensamento computacional
 - sem essa funcionalidade na API, a obtenção desses dados se torna mais manual e custosa
 - o objetivo desses scripts é automatizar o acesso aos dados completos (ou seja, com os ausentes) das votações nominais
 
-#### o que faz cada script
+#### O que faz cada script
 - [Script 1](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/evento_cd.py)
 
 - [Script 2](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/sessao_deliberativa_cd.py)
@@ -22,6 +31,9 @@ Repositório criado como projeto final das disciplinas "Pensamento computacional
 - [Script 3](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/dropdown_scraper_votacao.py)
 
 - [Script 4](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/final_scraper_bs.py)
+
+#### Como você pode rodar o código na sua máquina
+xxxx
 
 #### Instruções
 Trabalho individual.
@@ -46,7 +58,7 @@ Bibliotecas que não foram vistas durante a disciplina podem ser utilizadas (por
 
 Dica: crie funções para separar as etapas de seu programa e, caso seja útil, crie uma classe com métodos que executam as etapas ETL.
 
-####Apresentação
+#### Apresentação
 - O código deverá ser enviado pelo Blackboard
 - A apresentação do trabalho será feita na aula do dia 08/10/2021 e deverá durar de 3 a 5 minutos, consistindo de:
 - Explicação do problema/objetivo do programa
