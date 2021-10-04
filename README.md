@@ -28,11 +28,9 @@ Repositório criado como projeto final das disciplinas "Pensamento computacional
 ### O que faz cada script
 - [Script 1](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/evento_cd.py)
 
-- [Script 2](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/sessao_deliberativa_cd.py)
+- [Script 2](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/dropdown_scraper_votacao.py)
 
-- [Script 3](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/dropdown_scraper_votacao.py)
-
-- [Script 4](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/final_scraper_bs.py)
+- [Script 3](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/final_scraper_bs.py)
 
 ### Como você pode rodar o código na sua máquina
 xxxx
