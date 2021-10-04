@@ -1,11 +1,11 @@
 Repositório criado como projeto final das disciplinas "Pensamento computacional" e "Transparência, reprodutibilidade e uso ético dos dados", no master do Insper
 
-## Por que usamos ``Selenium``
+### Por que usamos ``Selenium``
 - a escolha por ``selenium`` ocorreu porque eu acredito que esta é uma das vantagens em usar Python
 - e, por isso, gostaria de ganhar mais fluência ao usar essa biblioteca
 - ao desenvolver os scripts com ``rvest`` no R, a Câmara passou a atrapalhar o acesso da máquina com ``HTTP ERROR 431``
 
-## O que os scripts fazem
+### O que os scripts fazem
 - Acessa os HTMLs de atividades no plenário
 - Filtra por sessões deliberativas (aqueles que têm votações)
 - Acessa os HTMLs de todas as sessões deliberativas
@@ -14,7 +14,7 @@ Repositório criado como projeto final das disciplinas "Pensamento computacional
 - Acessa os HTMLs de todas as votações nominais
 - Cria um CSV com os votos de todos os deputados nas votações
 
-#### Por que raspamos o site da Câmara
+### Por que raspamos o site da Câmara
 - hoje, a API da Câmara não informa os deputados ausentes nas votações nominais
 - tal demanda já foi apresentada como sugestão administrativa via Lei de Acesso à Informação
 - também foi reforçada, com apoio de outro usuário, [via issue no GitHub](https://github.com/CamaraDosDeputados/dados-abertos/issues/312) e [já havia sido cobrada por outras pessoas antes](https://github.com/CamaraDosDeputados/dados-abertos/issues/302)
@@ -23,7 +23,7 @@ Repositório criado como projeto final das disciplinas "Pensamento computacional
 - sem essa funcionalidade na API, a obtenção desses dados se torna mais manual e custosa
 - o objetivo desses scripts é automatizar o acesso aos dados completos (ou seja, com os ausentes) das votações nominais
 
-#### O que faz cada script
+### O que faz cada script
 - [Script 1](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/evento_cd.py)
 
 - [Script 2](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/sessao_deliberativa_cd.py)
@@ -32,10 +32,10 @@ Repositório criado como projeto final das disciplinas "Pensamento computacional
 
 - [Script 4](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/final_scraper_bs.py)
 
-#### Como você pode rodar o código na sua máquina
+### Como você pode rodar o código na sua máquina
 xxxx
 
-#### Instruções
+### Instruções
 Trabalho individual.
 
 Objetivo: criar um programa que executa um processo de ETL - Extract, Transform, Load. Essas 3 etapas são a base para programas que lidam com dados e são encontradas em diversos tipos de programas, exemplos:
