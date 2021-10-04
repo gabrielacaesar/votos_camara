@@ -5,7 +5,7 @@ Repositório criado como projeto final das disciplinas "Pensamento computacional
 - e, por isso, gostaria de ganhar mais fluência ao usar essa biblioteca
 - ao desenvolver os scripts com ``rvest`` no R, a Câmara passou a atrapalhar o acesso da máquina com ``HTTP ERROR 431``
 
-### O que os scripts fazem
+### O que o código faz
 - Acessa os HTMLs de atividades no plenário
 - Coleta os links de atividades no plenário
 - Filtra por sessões deliberativas (aquelas que têm votações)
