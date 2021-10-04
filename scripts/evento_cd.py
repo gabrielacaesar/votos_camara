@@ -1,13 +1,14 @@
-#################################################
-###     SCRAPER PARA OS EVENTOS DA CÂMARA     ###
-#################################################
+########################################################################
+###     SCRAPER PARA OS EVENTOS/ATIVIDADES DO PLENÁRIO DA CÂMARA     ###
+########################################################################
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 
 browser = webdriver.Chrome(ChromeDriverManager().install())
 
-url_list = list(map('https://www.camara.leg.br/agenda/?dataInicial__proxy=18/03/2020&dataInicial=18/03/2020&dataFinal__proxy=06/07/2021&dataFinal=22/09/2021&categorias=Plen%C3%A1rio&pagina={}'.format, range(1, 21)))
+url_list = list(map('https://www.camara.leg.br/agenda/?dataInicial__proxy=01/02/2020&dataInicial=01/02/2020&dataFinal__proxy=04/10/2021&dataFinal=04/10/2021&categorias=Plen%C3%A1rio&pagina={}'.format, range(1, 26)))
+print(url_list)
 
 data_n = []
 hora_n = []
@@ -30,18 +31,19 @@ for n in range(0,len(url_list)):
   
   for i in range(0, len(eventos)):
     data_n.append(data[i].text)
+    print(data_n)
     hora_n.append(hora[i].text)
     local_n.append(local[i].text)
     evento_n.append(evento[i].text)
     link_n.append(link[i].get_attribute("href"))
     indice_n.append(i)
-    url_n.append(url_list[n])
+    #url_n.append(url_list[n])
+    print(url_n)
 
 dados = {'data' : data_n, 'hora' : hora_n, 'local' : local_n, 'evento' : evento_n, 'link' : link_n, 'url' : url_n}
 
-df = pd.DataFrame(dados)
+urls_atividade_plenario = pd.DataFrame(dados)
 browser.quit()
 
-print(df)
-df.to_csv('data/df.csv', encoding='utf-8', index = False)
-
+print(urls_atividade_plenario)
+urls_atividade_plenario.to_csv('data/urls_atividade_plenario.csv', encoding='utf-8', index = False)
