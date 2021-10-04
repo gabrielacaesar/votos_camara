@@ -7,7 +7,7 @@ Repositório criado como projeto final das disciplinas "Pensamento computacional
 
 ### O que os scripts fazem
 - Acessa os HTMLs de atividades no plenário
-- Filtra por sessões deliberativas (aqueles que têm votações)
+- Filtra por sessões deliberativas (aquelas que têm votações)
 - Acessa os HTMLs de todas as sessões deliberativas
 - Coleta o número das votações nominais de cada sessão deliberativa
 - Cria URLs específicas para cada votação nominal
