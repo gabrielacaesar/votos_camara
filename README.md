@@ -1,9 +1,12 @@
 Repositório criado como projeto final das disciplinas "Pensamento computacional" e "Transparência, reprodutibilidade e uso ético dos dados", no master do Insper
 
 ### Por que usamos ``Selenium``
-- A escolha por ``selenium`` ocorreu porque eu acredito que esta é uma das vantagens em usar Python
+- A escolha por ``Selenium`` ocorreu porque eu acredito que esta é uma das vantagens em usar Python
+- Mas também usamos ``Beautiful Soup``
 - E, por isso, gostaria de ganhar mais fluência ao usar essa biblioteca
 - Ao desenvolver os scripts com ``rvest`` no R, a Câmara passou a atrapalhar o acesso da máquina com ``HTTP ERROR 431``
+- Posteriormente, foi encontrada uma forma de driblar o problema
+- Mas, ainda assim, havia um interesse em mexer com a automatização de browser
 
 ### O que o código faz
 - Acessa a pesquisa por atividades no plenário
@@ -18,8 +21,9 @@ Repositório criado como projeto final das disciplinas "Pensamento computacional
 - Cria um CSV com os votos de todos os deputados nas votações
 
 ### Por que raspamos o site da Câmara
-- Hoje, a API da Câmara não informa os deputados ausentes nas votações nominais
-- Tal demanda já foi apresentada como sugestão administrativa via Lei de Acesso à Informação
+- Hoje, a API da Câmara não informa os deputados ausentes nas votações nominais       
+- Apenas para comparar: a API do Senado informa os ausentes           
+- Tal demanda já foi apresentada como sugestão administrativa via Lei de Acesso à Informação para a Câmara           
 - Também foi reforçada, com apoio de outro usuário, [via issue no GitHub](https://github.com/CamaraDosDeputados/dados-abertos/issues/312) e [já havia sido cobrada por outras pessoas antes](https://github.com/CamaraDosDeputados/dados-abertos/issues/302)
 - Para ter o resultado nominal com todos os deputados em exercício, hoje é necessário raspar o HTML da Casa ([exemplo aqui](https://www.camara.leg.br/presenca-comissoes/votacao-portal?reuniao=63176&itemVotacao=10127)) ou baixar um arquivo DBF
 - Os arquivos DBF, porém, pararam de ser atualizados em determinado momento da pandemia, com a adoção do modelo de votação virtual
@@ -37,7 +41,9 @@ O código lê o arquivo CSV gerado pelo script anterior e considera a coluna com
 O código lê o arquivo CSV gerado pelo script anterior. Ele considera a coluna 'id_option' e 'link' para criar uma coluna nova chamada 'link_final'. Depois, ele coloca a coluna 'nome_option' em caixa alta e sem acento para aplicar um filtro caso detecte a palavra 'NOMINAL'. Por fim, ele considera a coluna 'link_final' para fazer um loop e coletar os dados de cada votação nominal: nome do deputado, partido do deputado, UF do deputado e voto. Casa não haja voto, o robô coloca "Ausente". Por fim, ele cria um dicionário e o transforma em dataframe para, enfim, baixá-lo como CSV. Output (arquivo gerado): dados_finais.csv
 
 ### Como você pode rodar o código na sua máquina
-xxxx
+- Verifique se você tem o Python na sua máquina     
+- Verifique a versão do seu Chrome e baixe o [ChromeDriver](https://chromedriver.chromium.org/downloads)       
+- Use o terminal para rodar os scripts        
 
 ### Instruções
 Trabalho individual.
