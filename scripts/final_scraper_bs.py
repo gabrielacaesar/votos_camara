@@ -9,7 +9,7 @@ import pandas as pd
 
 # import CSV scraped with dropdown_scraper_votacao.py
 id_votacoes = pd.read_csv("data/id_votacoes.csv")
-print(id_votacoes)
+#print(id_votacoes)
 
 # criando a URL especifica de cada item do dropdown
 id_votacoes['link_final'] = id_votacoes.apply(lambda row: row.link + '&itemVotacao=' +  str(row.id_option), axis = 1)
@@ -24,9 +24,10 @@ urls_finais = id_votacoes.loc[filtro_nominal]
 
 # criando df com urls para raspagem
 urls_finais = urls_finais['link_final']
+#print(len(urls_finais.tolist()))
 
 # criando listas vazias para o append
-url_all = []
+link_all = []
 nome_all = []
 partido_all = []
 voto_all = []
@@ -38,9 +39,11 @@ for url in range(0, len(urls_finais.tolist())):
   #print(url)
   page = requests.get(urls_finais.tolist()[0])
   soup = BeautifulSoup(page.text, 'html.parser')
-  div = soup.find('div', {'class': 'titulares'}) 
+  div = soup.find('div', {'class': 'titulares'})
+  link = urls_finais.tolist()[url]
   for li in div.find_all('li'):
-    url_all.append(url)
+    link_all.append(link)
+    print(link)
     nome = li.find("span", {"class": "nome"}).contents[0]
     nome_all.append(nome)
     #print(nome_all)
@@ -57,9 +60,9 @@ for url in range(0, len(urls_finais.tolist())):
         except AttributeError:
           voto = 'Ausente'
           voto_all.append(voto)
-    print(f'{nome_all} - {partido_all} - {voto_all} - {url_all}')
+    #print(f'{nome_all} - {partido_all} - {voto_all} - {link_all}')
         
-dados = {'nome': nome_all, 'partido': partido_all, 'voto': voto_all, 'url': url_all}
+dados = {'nome': nome_all, 'partido': partido_all, 'voto': voto_all, 'link': link_all}
 print(dados)
 
 dados_finais = pd.DataFrame(dados)
