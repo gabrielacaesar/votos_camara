@@ -43,6 +43,7 @@ O código lê o arquivo CSV gerado pelo script anterior. Ele considera a coluna 
 ### Como você pode rodar o código na sua máquina
 - Verifique se você tem o Python na sua máquina     
 - Verifique a versão do seu Chrome e baixe o [ChromeDriver](https://chromedriver.chromium.org/downloads)       
+- Faça o download do repositório na sua máquina     
 - Use o terminal para rodar os scripts        
 
 ### Instruções
