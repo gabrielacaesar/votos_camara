@@ -1,5 +1,3 @@
-![](https://c.tenor.com/pqckQpWm9DIAAAAM/typing-code.gif)
-
 Repositório criado como projeto final das disciplinas "Pensamento computacional" e "Transparência, reprodutibilidade e uso ético dos dados", no master do Insper.
  
 Este repositório tem como objetivo raspar dados de votações nominais do portal da Câmara dos Deputados.
@@ -17,6 +15,8 @@ Este repositório tem como objetivo raspar dados de votações nominais do porta
 - Acessa os HTMLs de todas as votações nominais ([Clique aqui](https://www.camara.leg.br/presenca-comissoes/votacao-portal?reuniao=59571&itemVotacao=28979) para ver o exemplo de URL)
 - Coleta os dados das votações nominais
 - Cria um CSV com os votos de todos os deputados nas votações
+
+![](https://c.tenor.com/pqckQpWm9DIAAAAM/typing-code.gif)
 
 ### O que faz cada script
 - [Script 1](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_periodo.py): **cd_periodo.py // definir_data()**           
