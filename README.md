@@ -1,8 +1,17 @@
-Repositório criado como projeto final das disciplinas "Pensamento computacional" e "Transparência, reprodutibilidade e uso ético dos dados", no master do Insper.
- 
-Este repositório tem como objetivo raspar dados de votações nominais do portal da Câmara dos Deputados.
+### Nome    
+Votos da Câmara dos Deputados      
 
-### O que o código faz
+### Descrição    
+Repositório criado como projeto final das disciplinas "Pensamento computacional" e "Transparência, reprodutibilidade e uso ético dos dados", no master do Insper.
+Este repositório tem como objetivo raspar dados de votações nominais do portal da Câmara dos Deputados.   
+
+### Autoria   
+Gabriela Caesar   
+
+## Data    
+Setembro e outubro de 2021    
+
+### O que o código faz   
 - Recebe a data de início e fim da pesquisa e a paginação máxima   
 - Gera URLs considerando esses dados
 - Acessa os HTMLs dessa pesquisa por atividades no plenário ([Clique aqui](https://www.camara.leg.br/agenda?dataInicial__proxy=01%2F02%2F2020&dataInicial=01%2F02%2F2020&dataFinal__proxy=01%2F07%2F2020&dataFinal=01%2F07%2F2020&categorias=Plen%C3%A1rio) para ver o exemplo de URL)
@@ -42,7 +51,7 @@ O código chama todas as funções acima mencionadas e informa os parâmetros da
 - Verifique se você tem o Python na sua máquina     
 - Verifique a versão do seu Chrome e baixe o [ChromeDriver adequado](https://chromedriver.chromium.org/downloads)       
 - Faça o download do repositório na sua máquina        
-- No terminal, rode o arquivo ``script-final.py``, que chama as funções   
+- No terminal, rode o arquivo ``script-final.py``, que chama as funções    
 
 ### Por que usamos ``Selenium``
 - A escolha por ``Selenium`` ocorreu porque eu acredito que esta é uma das vantagens em usar Python
