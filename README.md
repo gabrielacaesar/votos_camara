@@ -8,6 +8,9 @@ Este repositório tem como objetivo raspar dados de votações nominais do porta
 ### Autoria   
 Gabriela Caesar   
 
+### Orientações/ajudas    
+Alvaro Justen (Turicas), Bernardo Vianna e Cristina Caesar       
+
 ### Data    
 Setembro e outubro de 2021    
 
