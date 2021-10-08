@@ -16,8 +16,6 @@ Este repositório tem como objetivo raspar dados de votações nominais do porta
 - Coleta os dados das votações nominais
 - Cria um CSV com os votos de todos os deputados nas votações
 
-![](https://c.tenor.com/pqckQpWm9DIAAAAM/typing-code.gif)
-
 ### O que faz cada script
 - [Script 1](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_periodo.py): **cd_periodo.py // definir_data()**           
 O código considera os parâmetros informados pelo usuário (data de início, data de fim e paginação máxima) para gerar as URLs a serem percorridas.
