@@ -36,7 +36,13 @@ O código gera as URLs únicas de cada votação e filtra por votações nominai
 O código acessa cada URL e coleta os dados de cada votação nominal: nome do deputado, partido do deputado, UF do deputado e voto. Casa não haja voto, o robô coloca "Ausente". Output esperado (arquivo gerado): dados_finais.csv
 
 - [Script 7](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/script-final.py): **script-final.py**   
-O código chama todas as funções acima mencionadas e informa os parâmetros da função definir_data() do script cd_periodo. 
+O código chama todas as funções acima mencionadas e informa os parâmetros da função definir_data() do script cd_periodo.
+
+### Como você pode rodar o código na sua máquina
+- Verifique se você tem o Python na sua máquina     
+- Verifique a versão do seu Chrome e baixe o [ChromeDriver adequado](https://chromedriver.chromium.org/downloads)       
+- Faça o download do repositório na sua máquina        
+- No terminal, rode o arquivo ``script-final.py``, que chama as funções   
 
 ### Por que usamos ``Selenium``
 - A escolha por ``Selenium`` ocorreu porque eu acredito que esta é uma das vantagens em usar Python
@@ -54,14 +60,7 @@ O código chama todas as funções acima mencionadas e informa os parâmetros da
 - Para ter o resultado nominal com todos os deputados em exercício, hoje é necessário raspar o HTML da Casa ([exemplo aqui](https://www.camara.leg.br/presenca-comissoes/votacao-portal?reuniao=63176&itemVotacao=10127)) ou baixar um arquivo DBF
 - Os arquivos DBF, porém, pararam de ser atualizados em determinado momento da pandemia, com a adoção do modelo de votação virtual
 - Sem essa funcionalidade na API, a obtenção desses dados se torna mais manual e custosa
-- O objetivo desses scripts é automatizar o acesso aos dados completos (ou seja, com os ausentes) das votações nominais
-
-### Como você pode rodar o código na sua máquina
-- Verifique se você tem o Python na sua máquina     
-- Verifique a versão do seu Chrome e baixe o [ChromeDriver](https://chromedriver.chromium.org/downloads)       
-- Faça o download do repositório na sua máquina     
-- Use o terminal para rodar os scripts    
-- Rode o arquivo ``script-final.py``, que chama as funções      
+- O objetivo desses scripts é automatizar o acesso aos dados completos (ou seja, com os ausentes) das votações nominais   
 
 ### Instruções
 Trabalho individual.
