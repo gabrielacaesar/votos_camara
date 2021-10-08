@@ -4,7 +4,7 @@ Este repositório tem como objetivo raspar dados de votações nominais do porta
 
 ### O que o código faz
 - Recebe a data de início e fim da pesquisa e a paginação máxima   
-- Gera URLs considernado esses dados
+- Gera URLs considerando esses dados
 - Acessa os HTMLs dessa pesquisa por atividades no plenário ([Clique aqui](https://www.camara.leg.br/agenda?dataInicial__proxy=01%2F02%2F2020&dataInicial=01%2F02%2F2020&dataFinal__proxy=01%2F07%2F2020&dataFinal=01%2F07%2F2020&categorias=Plen%C3%A1rio) para ver o exemplo de URL)
 - Coleta os links de cada atividade no plenário
 - Filtra por sessões deliberativas (aquelas que têm votações)
