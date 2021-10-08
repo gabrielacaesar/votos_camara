@@ -39,7 +39,7 @@ O código chama todas as funções acima mencionadas e informa os parâmetros da
 ### Por que usamos ``Selenium``
 - A escolha por ``Selenium`` ocorreu porque eu acredito que esta é uma das vantagens em usar Python
 - E, por isso, gostaria de ganhar mais fluência ao usar essa biblioteca
-- Mas também usamos ``Beautiful Soup``
+- Mas também usamos ``Beautiful Soup`` e ``requests`` 
 - Ao desenvolver os scripts com ``rvest`` no R, a Câmara passou a atrapalhar o acesso da máquina com ``HTTP ERROR 431``
 - Posteriormente, foi encontrada uma forma de driblar o problema
 - Mas, ainda assim, havia um interesse em mexer com a automatização de browser, com ``Selenium``
