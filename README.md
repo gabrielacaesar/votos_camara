@@ -2,7 +2,7 @@
 Votos da Câmara dos Deputados      
 
 ### Descrição    
-Repositório criado como projeto final das disciplinas "Pensamento computacional" e "Transparência, reprodutibilidade e uso ético dos dados", no master do Insper.
+Repositório criado como projeto final das disciplinas "Pensamento computacional" e "Transparência, Reprodutibilidade e Uso ético dos dados", no [master do Insper](https://www.insper.edu.br/pos-graduacao/master-em-jornalismo-de-dados-automacao-e-data-storytelling/).
 Este repositório tem como objetivo raspar dados de votações nominais do portal da Câmara dos Deputados.   
 
 ### Autoria   
@@ -73,6 +73,7 @@ O código chama todas as funções acima mencionadas e informa os parâmetros da
 
 ### Instruções
 Trabalho individual.
+Professor da disciplina: [Alvaro Justen (Turicas)](https://github.com/turicas)        
 
 Objetivo: criar um programa que executa um processo de ETL - Extract, Transform, Load. Essas 3 etapas são a base para programas que lidam com dados e são encontradas em diversos tipos de programas, exemplos:
 
