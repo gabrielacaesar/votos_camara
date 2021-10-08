@@ -23,5 +23,5 @@ def definir_link_nominal():
   print(urls_finais)
   
   # criando df com urls para raspagem
-  urls_finais['link_final'].to_csv("data/urls_finais.csv")
+  urls_finais['link_final'].to_csv("data/urls_finais.csv", encoding='utf-8', index = False)
   
