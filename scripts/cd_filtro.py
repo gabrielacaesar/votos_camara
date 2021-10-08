@@ -25,5 +25,5 @@ def filtrar_deliberativa():
   print(url_votacao)
   
   # coluna com urls para webscraping
-  url_votacao['url'].to_csv("data/url_votacao.csv")
+  url_votacao['url'].to_csv("data/url_votacao.csv", encoding='utf-8', index = False)
 
