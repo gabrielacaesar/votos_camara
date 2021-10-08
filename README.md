@@ -33,7 +33,7 @@ O código gera as URLs únicas de cada votação e filtra por votações nominai
 - [Script 6](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_votos.py): **cd_votos.py // coletar_votos**    
 O código acessa cada URL e coleta os dados de cada votação nominal: nome do deputado, partido do deputado, UF do deputado e voto. Casa não haja voto, o robô coloca "Ausente". Output esperado (arquivo gerado): dados_finais.csv
 
-- [Script 7](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/script-final.py): **cd_votos.py**   
+- [Script 7](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/script-final.py): **script-final.py**   
 O código chama todas as funções acima mencionadas e informa os parâmetros da função definir_data() do script cd_periodo. 
 
 ### Por que usamos ``Selenium``
