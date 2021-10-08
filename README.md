@@ -1,4 +1,5 @@
-Repositório criado como projeto final das disciplinas "Pensamento computacional" e "Transparência, reprodutibilidade e uso ético dos dados", no master do Insper
+Repositório criado como projeto final das disciplinas "Pensamento computacional" e "Transparência, reprodutibilidade e uso ético dos dados", no master do Insper.
+Este repositório tem como objetivo raspar dados de votações nominais do portal da Câmara dos Deputados.
 
 ### Por que usamos ``Selenium``
 - A escolha por ``Selenium`` ocorreu porque eu acredito que esta é uma das vantagens em usar Python
