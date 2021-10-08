@@ -1,4 +1,4 @@
-![](https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fsearch%2Fmr-robot-gifs&psig=AOvVaw2tyIXPcRfgCI03sv3J718Z&ust=1633756046221000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJC64MWFuvMCFQAAAAAdAAAAABAD)
+![](https://c.tenor.com/6GW1cQLq080AAAAC/mr-robot-time-out.gif)
 
 Repositório criado como projeto final das disciplinas "Pensamento computacional" e "Transparência, reprodutibilidade e uso ético dos dados", no master do Insper.
  
