@@ -3,7 +3,9 @@ Repositório criado como projeto final das disciplinas "Pensamento computacional
 Este repositório tem como objetivo raspar dados de votações nominais do portal da Câmara dos Deputados.
 
 ### O que o código faz
-- Acessa a pesquisa por atividades no plenário ([Clique aqui](https://www.camara.leg.br/agenda?dataInicial__proxy=01%2F02%2F2020&dataInicial=01%2F02%2F2020&dataFinal__proxy=01%2F07%2F2020&dataFinal=01%2F07%2F2020&categorias=Plen%C3%A1rio) para ver o exemplo de URL)
+- Recebe a data de início e fim da pesquisa e a paginação máxima   
+- Gera URLs considernado esses dados
+- Acessa os HTMLs dessa pesquisa por atividades no plenário ([Clique aqui](https://www.camara.leg.br/agenda?dataInicial__proxy=01%2F02%2F2020&dataInicial=01%2F02%2F2020&dataFinal__proxy=01%2F07%2F2020&dataFinal=01%2F07%2F2020&categorias=Plen%C3%A1rio) para ver o exemplo de URL)
 - Coleta os links de cada atividade no plenário
 - Filtra por sessões deliberativas (aquelas que têm votações)
 - Acessa os HTMLs de todas as sessões deliberativas ([Clique aqui](https://www.camara.leg.br/presenca-comissoes/votacao-portal?reuniao=59571) para ver o exemplo de URL)
