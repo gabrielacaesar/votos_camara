@@ -1,4 +1,4 @@
-![](https://c.tenor.com/e73LQkmBbcUAAAAC/mr-robot-happy.gif)
+![](https://c.tenor.com/pqckQpWm9DIAAAAM/typing-code.gif)
 
 Repositório criado como projeto final das disciplinas "Pensamento computacional" e "Transparência, reprodutibilidade e uso ético dos dados", no master do Insper.
  
