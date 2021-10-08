@@ -8,9 +8,9 @@ def definir_data(data_inicio, data_fim, paginacao_maxima):
   Também exige que a paginação máxima seja informada.
   
   Parâmetros obrigatórios:
-    1) Data de início (string)
-    2) Data do início (string)
-    3) Paginação máxima (int)
+    1) Data de início (string). Exemplo: "01/02/2020"
+    2) Data do início (string). Exemplo: "01/07/2020"
+    3) Paginação máxima (int). Exemplo: 7
   """
   url_list = []
   link = f'https://www.camara.leg.br/agenda/?dataInicial__proxy={data_inicio}&dataInicial={data_inicio}&dataFinal__proxy={data_fim}&dataFinal={data_fim}&categorias=Plen%C3%A1rio&pagina='
