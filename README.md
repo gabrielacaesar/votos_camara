@@ -50,7 +50,7 @@ O código chama todas as funções acima mencionadas e informa os parâmetros da
 ### Como você pode rodar o código na sua máquina
 - Verifique se você tem o Python na sua máquina     
 - Verifique a versão do seu Chrome e baixe o [ChromeDriver adequado](https://chromedriver.chromium.org/downloads)       
-- Faça o download do repositório na sua máquina        
+- [Faça o download](https://github.com/gabrielacaesar/votos_camara/archive/refs/heads/main.zip) do repositório na sua máquina        
 - No terminal, rode o arquivo ``script-final.py``, que chama as funções    
 
 ### Por que usamos ``Selenium``
