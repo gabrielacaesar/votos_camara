@@ -2,14 +2,6 @@ Repositório criado como projeto final das disciplinas "Pensamento computacional
  
 Este repositório tem como objetivo raspar dados de votações nominais do portal da Câmara dos Deputados.
 
-### Por que usamos ``Selenium``
-- A escolha por ``Selenium`` ocorreu porque eu acredito que esta é uma das vantagens em usar Python
-- E, por isso, gostaria de ganhar mais fluência ao usar essa biblioteca
-- Mas também usamos ``Beautiful Soup``
-- Ao desenvolver os scripts com ``rvest`` no R, a Câmara passou a atrapalhar o acesso da máquina com ``HTTP ERROR 431``
-- Posteriormente, foi encontrada uma forma de driblar o problema
-- Mas, ainda assim, havia um interesse em mexer com a automatização de browser, com ``Selenium``
-
 ### O que o código faz
 - Acessa a pesquisa por atividades no plenário
 - Coleta os links de cada atividade no plenário
@@ -22,6 +14,36 @@ Este repositório tem como objetivo raspar dados de votações nominais do porta
 - Coleta os dados das votações nominais
 - Cria um CSV com os votos de todos os deputados nas votações
 
+### O que faz cada script
+- [Script 1](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_periodo.py): **cd_periodo.py // definir_data()**           
+O código considera os parâmetros informados pelo usuário (data de início, data de fim e paginação máxima) para gerar as URLs a serem percorridas.
+
+- [Script 2](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_evento.py): **cd_evento.py // coletar_eventos()**        
+O código acessa cada URL e coleta os seguintes dados: data, hora, local, nome do evento e link do evento. Ele coloca tais dados em um dicionário e o transforma em um dataframe para fazer o download em CSV. Output (arquivo gerado): urls_eventos_plenario.csv
+
+- [Script 3](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_filtro.py): **cd_filtro.py // filtrar_deliberativa()**    
+O código padroniza a coluna 'atividade e filtra considerando as colunas 'atividade' e 'link'. O objetivo é manter apenas votações deliberativas da Câmara dos Deputados. Output esperado (arquivo gerado): url_votacao.csv
+
+- [Script 4](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_votacao): **cd_votacao.py // pegar_id_votacao**    
+O código acessa cada URL e coleta o id do menu dropdown de cada votação. Output esperado (arquivo gerado): id_votacoes.csv
+
+- [Script 5](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_links.py): **cd_links.py // definir_link_nominal**    
+O código gera as URLs únicas de cada votação e filtra por votações nominais. Output esperado (arquivo gerado): urls_finais.csv
+
+- [Script 6](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_votos.py): **cd_votos.py // coletar_votos**    
+O código acessa cada URL e coleta os dados de cada votação nominal: nome do deputado, partido do deputado, UF do deputado e voto. Casa não haja voto, o robô coloca "Ausente". Output esperado (arquivo gerado): dados_finais.csv
+
+- [Script 7](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/script-final.py): **cd_votos.py**   
+O código chama todas as funções acima mencionadas e informa os parâmetros da função definir_data() do script cd_periodo. 
+
+### Por que usamos ``Selenium``
+- A escolha por ``Selenium`` ocorreu porque eu acredito que esta é uma das vantagens em usar Python
+- E, por isso, gostaria de ganhar mais fluência ao usar essa biblioteca
+- Mas também usamos ``Beautiful Soup``
+- Ao desenvolver os scripts com ``rvest`` no R, a Câmara passou a atrapalhar o acesso da máquina com ``HTTP ERROR 431``
+- Posteriormente, foi encontrada uma forma de driblar o problema
+- Mas, ainda assim, havia um interesse em mexer com a automatização de browser, com ``Selenium``
+
 ### Por que raspamos o site da Câmara
 - Hoje, a API da Câmara não informa os deputados ausentes nas votações nominais       
 - Apenas para comparar: a API do Senado informa os ausentes           
@@ -32,21 +54,12 @@ Este repositório tem como objetivo raspar dados de votações nominais do porta
 - Sem essa funcionalidade na API, a obtenção desses dados se torna mais manual e custosa
 - O objetivo desses scripts é automatizar o acesso aos dados completos (ou seja, com os ausentes) das votações nominais
 
-### O que faz cada script
-- [Script 1](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/evento_cd.py): **evento_cd.py**           
-O código entra na URL citada, que faz uma busca por eventos no plenário da Câmara desde 01/02/2020 (início da atual legislatura) até hoje (04/10/2021). Em cada URL, ele coleta os seguintes dados: data, hora, local, nome do evento e link do evento. Ele coloca tais dados em um dicionário e o transforma em um dataframe para fazer o download em CSV. Output (arquivo gerado): urls_eventos_plenario.csv
-
-- [Script 2](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/dropdown_scraper_votacao.py): **dropdown_scraper_votacao.py**           
-O código lê o arquivo CSV gerado pelo script anterior e considera a coluna com as urls para gerar o loop. Na iteração, o robô coleta os dados do menu dropdown, como nome da votação e id da votação. Depois, ele cria um dicionário e o transforma em dataframe para, enfim, baixá-lo como CSV. Output (arquivo gerado): id_votacoes.csv
-
-- [Script 3](https://github.com/gabrielacaesar/ausencia_congresso/blob/main/scripts/final_scraper_bs.py): **final_scraper_bs.py**       
-O código lê o arquivo CSV gerado pelo script anterior. Ele considera a coluna 'id_option' e 'link' para criar uma coluna nova chamada 'link_final'. Depois, ele coloca a coluna 'nome_option' em caixa alta e sem acento para aplicar um filtro caso detecte a palavra 'NOMINAL'. Por fim, ele considera a coluna 'link_final' para fazer um loop e coletar os dados de cada votação nominal: nome do deputado, partido do deputado, UF do deputado e voto. Casa não haja voto, o robô coloca "Ausente". Por fim, ele cria um dicionário e o transforma em dataframe para, enfim, baixá-lo como CSV. Output (arquivo gerado): dados_finais.csv
-
 ### Como você pode rodar o código na sua máquina
 - Verifique se você tem o Python na sua máquina     
 - Verifique a versão do seu Chrome e baixe o [ChromeDriver](https://chromedriver.chromium.org/downloads)       
 - Faça o download do repositório na sua máquina     
-- Use o terminal para rodar os scripts        
+- Use o terminal para rodar os scripts    
+- Rode o arquivo ``script-final.py``, que chama as funções      
 
 ### Instruções
 Trabalho individual.
