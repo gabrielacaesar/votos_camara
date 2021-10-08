@@ -53,7 +53,7 @@ O código chama todas as funções acima mencionadas e informa os parâmetros da
 - [Faça o download](https://github.com/gabrielacaesar/votos_camara/archive/refs/heads/main.zip) do repositório na sua máquina        
 - No terminal, rode o arquivo ``script-final.py``, que chama as funções    
 
-[!](https://github.com/gabrielacaesar/votos_camara/blob/main/img/terminal-readme.gif)
+![](https://github.com/gabrielacaesar/votos_camara/blob/main/img/terminal-readme.gif)
 
 ### Por que usamos ``Selenium``
 - A escolha por ``Selenium`` ocorreu porque eu acredito que esta é uma das vantagens em usar Python
