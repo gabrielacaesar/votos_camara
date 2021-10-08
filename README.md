@@ -24,13 +24,13 @@ O código acessa cada URL e coleta os seguintes dados: data, hora, local, nome d
 - [Script 3](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_filtro.py): **cd_filtro.py // filtrar_deliberativa()**    
 O código padroniza a coluna 'atividade e filtra considerando as colunas 'atividade' e 'link'. O objetivo é manter apenas votações deliberativas da Câmara dos Deputados. Output esperado (arquivo gerado): url_votacao.csv
 
-- [Script 4](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_votacao): **cd_votacao.py // pegar_id_votacao**    
+- [Script 4](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_votacao): **cd_votacao.py // pegar_id_votacao()**    
 O código acessa cada URL e coleta o id do menu dropdown de cada votação. Output esperado (arquivo gerado): id_votacoes.csv
 
-- [Script 5](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_links.py): **cd_links.py // definir_link_nominal**    
+- [Script 5](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_links.py): **cd_links.py // definir_link_nominal()**    
 O código gera as URLs únicas de cada votação e filtra por votações nominais. Output esperado (arquivo gerado): urls_finais.csv
 
-- [Script 6](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_votos.py): **cd_votos.py // coletar_votos**    
+- [Script 6](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_votos.py): **cd_votos.py // coletar_votos()**    
 O código acessa cada URL e coleta os dados de cada votação nominal: nome do deputado, partido do deputado, UF do deputado e voto. Casa não haja voto, o robô coloca "Ausente". Output esperado (arquivo gerado): dados_finais.csv
 
 - [Script 7](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/script-final.py): **script-final.py**   
