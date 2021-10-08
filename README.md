@@ -48,7 +48,7 @@ O código acessa cada URL e coleta os dados de cada votação nominal: nome do d
 O código chama todas as funções acima mencionadas e informa os parâmetros da função definir_data() do script cd_periodo.
 
 ### Como você pode rodar o código na sua máquina
-- Verifique se você tem o Python na sua máquina     
+- Verifique se você tem o Python na sua máquina. Caso negativo, [instale-o](https://www.python.org/downloads/).         
 - Verifique a versão do seu Chrome e baixe o [ChromeDriver adequado](https://chromedriver.chromium.org/downloads)       
 - [Faça o download](https://github.com/gabrielacaesar/votos_camara/archive/refs/heads/main.zip) do repositório na sua máquina        
 - No terminal, rode o arquivo ``script-final.py``, que chama as funções    
