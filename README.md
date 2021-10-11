@@ -47,7 +47,7 @@ O código gera as URLs únicas de cada votação e filtra por votações nominai
 O código acessa cada URL e coleta os dados de cada votação nominal: nome do deputado, partido do deputado, UF do deputado e voto. Casa não haja voto, o robô coloca "Ausente". Output esperado (arquivo gerado): dados_finais.csv
 
 - [Script 7](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/script-final.py): **script-final.py**   
-O código chama todas as funções acima mencionadas e informa os parâmetros da função definir_data() do script cd_periodo.
+O código chama todas as funções acima mencionadas e informa os parâmetros da função definir_data() do script cd_periodo. Por padrão, o script define que o período é de 01/02/2020 a 01/07/2020 com paginação máxima de 7.
 
 ### Como você pode rodar o código na sua máquina
 - Verifique se você tem o Python na sua máquina. Caso negativo, [instale-o](https://www.python.org/downloads/).         
