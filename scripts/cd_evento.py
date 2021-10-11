@@ -4,8 +4,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 import time
 
-browser = webdriver.Chrome(ChromeDriverManager().install())
-
 # criacao de funcao
 def coletar_eventos():
   """
@@ -22,7 +20,9 @@ def coletar_eventos():
   link_all = []
   indice_all = []
   url_original = []
-    
+  
+  browser = webdriver.Chrome(ChromeDriverManager().install())
+  
   for url in range(0,len(url_list)):
     browser.get(url_list[url])
     eventos = browser.find_elements_by_xpath('//a[@class="g-agenda__nome"]')
