@@ -3,8 +3,6 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 import time
-
-browser = webdriver.Chrome(ChromeDriverManager().install())
   
 # criacao de funcao
 def pegar_id_votacao():
@@ -21,6 +19,9 @@ def pegar_id_votacao():
   link_votacao = []
   option_value = []
   option_name = []
+  
+  # run webdriver
+  browser = webdriver.Chrome(ChromeDriverManager().install())
   
   # loop para acessar URL e pegar o 'value' do option
   for link in range(0,len(url_scraper.tolist())):
