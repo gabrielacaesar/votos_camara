@@ -29,7 +29,7 @@ Setembro e outubro de 2021
 
 ### O que faz cada script
 - [Script 1](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_periodo.py): **cd_periodo.py // definir_data()**           
-O código considera os parâmetros informados pelo usuário (data de início, data de fim e paginação máxima) para gerar as URLs a serem percorridas.
+O código considera os parâmetros informados pelo usuário (data de início, data de fim e paginação máxima) para gerar as URLs a serem percorridas. O HTML a ser raspado passou a ser gerado pela Câmara a partir de 2020 - e, portanto, aconselha-se a escolha por datas a partir deste período. Para datas anteriores, aconselha-se o uso dos arquivos DBFs, mencionados também no tópico "Por que raspamos o site da Câmara".      
 
 - [Script 2](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_evento.py): **cd_evento.py // coletar_eventos()**        
 O código acessa cada URL e coleta os seguintes dados: data, hora, local, nome do evento e link do evento. Ele coloca tais dados em um dicionário e o transforma em um dataframe para fazer o download em CSV. Output (arquivo gerado): urls_eventos_plenario.csv
@@ -52,8 +52,9 @@ O código chama todas as funções acima mencionadas e informa os parâmetros da
 ### Como você pode rodar o código na sua máquina
 - Verifique se você tem o Python na sua máquina. Caso negativo, [instale-o](https://www.python.org/downloads/).         
 - Verifique a versão do seu Chrome e baixe o [ChromeDriver adequado](https://chromedriver.chromium.org/downloads)       
-- [Faça o download](https://github.com/gabrielacaesar/votos_camara/archive/refs/heads/main.zip) do repositório na sua máquina        
-- No terminal, rode o arquivo ``script-final.py``, que chama as funções    
+- [Faça o download](https://github.com/gabrielacaesar/votos_camara/archive/refs/heads/main.zip) do repositório na sua máquina    
+- Defina o período das votações e a paginação máxima no arquivo ``script-final.py``       
+- No terminal, rode o arquivo ``script-final.py``, que chama todas as funções    
 
 ![](https://github.com/gabrielacaesar/votos_camara/blob/main/img/terminal-readme.gif)
 
