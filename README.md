@@ -32,12 +32,12 @@ Setembro e outubro de 2021
 
 ### Dicionário de dados
 
-|    Variável    |    Definição      |
-|------------------------------------|
-| nome | Nome do deputado |
-| partido | Partido do deputado |
-| voto | Voto do deputado |
-| link | Link da votação nominal |
+|    Variável    |    Definição      |                      
+|------------------------------------|                    
+| nome | Nome do deputado |                 
+| partido | Partido do deputado |                 
+| voto | Voto do deputado |                   
+| link | Link da votação nominal |                  
 
 ### O que faz cada script
 - [Script 1](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_periodo.py): **cd_periodo.py // definir_data()**           
