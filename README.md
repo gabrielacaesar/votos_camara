@@ -1,7 +1,7 @@
 # Votos da Câmara dos Deputados      
 
 ### Descrição    
-Repositório criado como projeto final das disciplinas "Pensamento computacional" e "Transparência, Reprodutibilidade e Uso ético dos dados", no [master do Insper](https://www.insper.edu.br/pos-graduacao/master-em-jornalismo-de-dados-automacao-e-data-storytelling/).
+Repositório criado como projeto final das disciplinas "Pensamento computacional" e "Transparência, reprodutibilidade e uso ético dos dados", no [master do Insper](https://www.insper.edu.br/pos-graduacao/master-em-jornalismo-de-dados-automacao-e-data-storytelling/).
 Este repositório tem como objetivo raspar dados de votações nominais do portal da Câmara dos Deputados.   
 
 ### Autoria   
