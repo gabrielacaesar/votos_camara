@@ -28,16 +28,7 @@ Setembro e outubro de 2021
 - Filtra por votações nominais (aquelas que mostram o voto de cada político)
 - Acessa os HTMLs de todas as votações nominais ([Clique aqui](https://www.camara.leg.br/presenca-comissoes/votacao-portal?reuniao=59571&itemVotacao=28979) para ver o exemplo de URL)
 - Coleta os dados das votações nominais
-- Cria um CSV com os votos de todos os deputados nas votações
-
-### Dicionário de dados
-
-|    Variável    |    Definição             |                      
-|----------------|--------------------------|                    
-|      nome      | Nome do deputado         |                 
-|     partido    | Partido do deputado      |                 
-|      voto      | Voto do deputado         |                   
-|      link      | Link da votação nominal  |                  
+- Cria um CSV com os votos de todos os deputados nas votações            
 
 ### O que faz cada script
 - [Script 1](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_periodo.py): **cd_periodo.py // definir_data()**           
@@ -60,6 +51,16 @@ O código acessa cada URL e coleta os dados de cada votação nominal: nome do d
 
 - [Script 7](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/script-final.py): **script-final.py**   
 O código chama todas as funções acima mencionadas e informa os parâmetros da função definir_data() do script cd_periodo. Por padrão, o script define que o período é de 01/02/2020 a 01/07/2020 com paginação máxima de 7.
+
+### Dicionário de dados
+
+ ``dados_finais.csv``
+|    Variável    |    Definição             |                      
+|----------------|--------------------------|                    
+|      nome      | Nome do deputado         |                 
+|     partido    | Partido do deputado      |                 
+|      voto      | Voto do deputado         |                   
+|      link      | Link da votação nominal  |      
 
 ### Como você pode rodar o código na sua máquina
 - Verifique se você tem o Python na sua máquina. Caso negativo, [instale-o](https://www.python.org/downloads/).         
