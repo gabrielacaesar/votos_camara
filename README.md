@@ -11,7 +11,10 @@ Gabriela Caesar
 Alvaro Justen (Turicas), Bernardo Vianna e Cristina Caesar       
 
 ### Data    
-Setembro e outubro de 2021    
+Setembro e outubro de 2021
+
+### Última atualização
+11/10/2021
 
 ### O que o código faz   
 - Recebe a data de início e fim da pesquisa e a paginação máxima   
@@ -26,6 +29,15 @@ Setembro e outubro de 2021
 - Acessa os HTMLs de todas as votações nominais ([Clique aqui](https://www.camara.leg.br/presenca-comissoes/votacao-portal?reuniao=59571&itemVotacao=28979) para ver o exemplo de URL)
 - Coleta os dados das votações nominais
 - Cria um CSV com os votos de todos os deputados nas votações
+
+### Dicionário de dados
+
+|    Variável    |    Definição      |
+|------------------------------------|
+| nome | Nome do deputado |
+| partido | Partido do deputado |
+| voto | Voto do deputado |
+| link | Link da votação nominal |
 
 ### O que faz cada script
 - [Script 1](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_periodo.py): **cd_periodo.py // definir_data()**           
