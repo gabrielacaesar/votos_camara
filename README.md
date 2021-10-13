@@ -32,25 +32,25 @@ Setembro e outubro de 2021
 
 ### O que faz cada script
 - [Script 1](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_periodo.py): **cd_periodo.py // definir_data()**           
-O código considera os parâmetros informados pelo usuário (data de início, data de fim e paginação máxima) para gerar as URLs a serem percorridas. O HTML a ser raspado passou a ser gerado pela Câmara a partir de 2020 - e, portanto, aconselha-se a escolha por datas a partir deste período. Para datas anteriores, aconselha-se o uso dos arquivos DBFs, mencionados também no tópico "Por que raspamos o site da Câmara".      
+O código considera os parâmetros informados pelo usuário (data de início, data de fim e paginação máxima) para gerar as URLs a serem percorridas. Este HTML a ser raspado passou a ser gerado pela Câmara a partir de 2020 - e, portanto, aconselha-se a escolha por datas a partir deste período. Para datas anteriores, aconselha-se o uso dos arquivos DBFs, mencionados também no tópico "Por que raspamos o site da Câmara". Output (arquivo gerado): ``url_list.csv``            
 
 - [Script 2](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_evento.py): **cd_evento.py // coletar_eventos()**        
-O código acessa cada URL e coleta os seguintes dados: data, hora, local, nome do evento e link do evento. Ele coloca tais dados em um dicionário e o transforma em um dataframe para fazer o download em CSV. Output (arquivo gerado): urls_eventos_plenario.csv
+O código acessa cada URL e coleta os seguintes dados: data, hora, local, nome do evento e link do evento. Ele coloca tais dados em um dicionário e o transforma em um dataframe para fazer o download em CSV. Output (arquivo gerado): ``urls_eventos_plenario.csv``   
 
 - [Script 3](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_filtro.py): **cd_filtro.py // filtrar_deliberativa()**    
-O código padroniza a coluna 'atividade e filtra considerando as colunas 'atividade' e 'link'. O objetivo é manter apenas votações deliberativas da Câmara dos Deputados. Output esperado (arquivo gerado): url_votacao.csv
+O código padroniza a coluna 'atividade e filtra considerando as colunas 'atividade' e 'link'. O objetivo é manter apenas votações deliberativas da Câmara dos Deputados. Output esperado (arquivo gerado): ``url_votacao.csv``   
 
 - [Script 4](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_votacao): **cd_votacao.py // pegar_id_votacao()**    
-O código acessa cada URL e coleta o id do menu dropdown de cada votação. Output esperado (arquivo gerado): id_votacoes.csv
+O código acessa cada URL e coleta o id do menu dropdown de cada votação. Output esperado (arquivo gerado): ``id_votacoes.csv``   
 
 - [Script 5](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_links.py): **cd_links.py // definir_link_nominal()**    
-O código gera as URLs únicas de cada votação e filtra por votações nominais. Output esperado (arquivo gerado): urls_finais.csv
+O código gera as URLs únicas de cada votação e filtra por votações nominais. Output esperado (arquivo gerado): ``urls_finais.csv``   
 
 - [Script 6](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/cd_votos.py): **cd_votos.py // coletar_votos()**    
-O código acessa cada URL e coleta os dados de cada votação nominal: nome do deputado, partido do deputado, UF do deputado e voto. Casa não haja voto, o robô coloca "Ausente". Output esperado (arquivo gerado): dados_finais.csv
+O código acessa cada URL e coleta os dados de cada votação nominal: nome do deputado, partido do deputado, UF do deputado e voto. Casa não haja voto, o robô coloca "Ausente". Output esperado (arquivo gerado): ``dados_finais.csv``  
 
 - [Script 7](https://github.com/gabrielacaesar/votos_camara/blob/main/scripts/script-final.py): **script-final.py**   
-O código chama todas as funções acima mencionadas e informa os parâmetros da função definir_data() do script cd_periodo. Por padrão, o script define que o período é de 01/02/2020 a 01/07/2020 com paginação máxima de 7.
+O código chama todas as funções acima mencionadas e informa os parâmetros da função definir_data() do script cd_periodo. Por padrão, o script define que o período é de 01/02/2020 a 01/07/2020 com paginação máxima de 7. Output esperado (arquivo gerado): todos os CSVs citados anteriormente.   
 
 ### Dicionário de dados
 
