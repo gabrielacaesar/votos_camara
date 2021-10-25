@@ -63,8 +63,7 @@ O código chama todas as funções acima mencionadas e informa os parâmetros da
 |      link      | Link da votação nominal  |      
 
 ### Como você pode rodar o código na sua máquina
-- Verifique se você tem o Python na sua máquina. Caso negativo, [instale-o](https://www.python.org/downloads/).         
-- Verifique a versão do seu Chrome e baixe o [ChromeDriver adequado](https://chromedriver.chromium.org/downloads)       
+- Verifique se você tem o Python na sua máquina. Caso negativo, [instale-o](https://www.python.org/downloads/).            
 - [Faça o download](https://github.com/gabrielacaesar/votos_camara/archive/refs/heads/main.zip) do repositório na sua máquina    
 - Defina o período das votações e a paginação máxima no arquivo ``script-final.py``       
 - No terminal, rode o arquivo ``script-final.py``, que chama todas as funções    
